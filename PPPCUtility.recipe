@@ -103,6 +103,17 @@
 				<key>Processor</key>
 				<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
 			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>patch_softwaretitle</key>
+					<string>%NAME%</string>
+					<key>patch_template</key>
+					<string>JamfPatchTemplate.xml</string>
+				</dict>
+				<key>Processor</key>
+				<string>com.github.grahampugh.jamf-upload.processors/JamfPatchUploader</string>
+			</dict>
 		</array>
 	</dict>
 </plist>
