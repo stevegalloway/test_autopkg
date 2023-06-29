@@ -49,4 +49,4 @@
             </grace_period>
         </user_interaction>
         <software_title_configuration_id>%patch_softwaretitle_id%</software_title_configuration_id>
-    </policy>
+    </patch_policy>
