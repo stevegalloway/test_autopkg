@@ -3,6 +3,7 @@
     <general>
         <name>%POLICY_NAME%</name>
         <enabled>true</enabled>
+        <trigger_other>latest-%NAME%</trigger_other>
         <frequency>Ongoing</frequency>
         <category>
             <name>%POLICY_CATEGORY%</name>
