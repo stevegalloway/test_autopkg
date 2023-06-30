@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.jamf.firefox</string>
+	<key>Input</key>
+	<dict>
+		<key>CATEGORY</key>
+		<string>Applications</string>
+		<key>GROUP_NAME</key>
+		<string>Firefox-update-smart</string>
+		<key>GROUP_TEMPLATE</key>
+		<string>JamfSmartGroupTemplate.xml</string>
+		<key>LATEST_RELEASE</key>
+		<string>LATEST_FIREFOX_VERSION</string>
+		<key>LOCALE</key>
+		<string>en-US</string>
+		<key>NAME</key>
+		<string>Firefox</string>
+		<key>POLICY_CATEGORY</key>
+		<string>Testing</string>
+		<key>POLICY_NAME</key>
+		<string>Install Latest %NAME%</string>
+		<key>POLICY_TEMPLATE</key>
+		<string>JamfPolicyTemplate.xml</string>
+		<key>SELF_SERVICE_DESCRIPTION</key>
+		<string>Firefox is a web browser from Mozilla.</string>
+		<key>SELF_SERVICE_DISPLAY_NAME</key>
+		<string>Install Latest %NAME%</string>
+		<key>SELF_SERVICE_ICON</key>
+		<string>%NAME%.png</string>
+		<key>SOFTWARETITLE</key>
+		<string>Firefox</string>
+		<key>TESTING_GROUP_NAME</key>
+		<string>Testing</string>
+		<key>UPDATE_PREDICATE</key>
+		<string>pkg_uploaded == False</string>
+		<key>VENDOR</key>
+		<string>Mozilla</string>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.grahampugh-recipes.jamf.Firefox</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e36fad29574c24f2e7b129240f58fb56333733e6</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/JamfUploaderProcessors/JamfComputerGroupUploader.py</string>
+				<key>sha256_hash</key>
+				<string>c0b60d25417a4b77e96f4475f9dc972da73837beb8c675cb4d1382b0d63d9e2e</string>
+			</dict>
+			<key>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ab243ec4077657cd097db3525df42ed7b41022dd</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/JamfUploaderProcessors/JamfPackageUploader.py</string>
+				<key>sha256_hash</key>
+				<string>afa74047c22a5c01a1eb1e115512c019d1921db095ebe2ffe20e632674354543</string>
+			</dict>
+			<key>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e36fad29574c24f2e7b129240f58fb56333733e6</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/JamfUploaderProcessors/JamfPolicyUploader.py</string>
+				<key>sha256_hash</key>
+				<string>85ce9708ce3e12786d350cb5f2c7ac15ca70ac419aca2c1db51b36665f085d78</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.FirefoxSignedPkg</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b8ebd97b7fc92cc4a9dc382ccc2ff8090c1b8f21</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Mozilla/FirefoxSignedPkg.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>63a854b014f941e7c6a24714eab91310ca0d40b91ab33e609724f24e918be53f</string>
+			</dict>
+			<key>com.github.autopkg.grahampugh-recipes.jamf.Firefox</key>
+			<dict>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.grahampugh-recipes/Jamf_Recipes/firefox.jamf.recipe</string>
+				<key>sha256_hash</key>
+				<string>f155afb3322b3858cedb3f0fb108ba9013e9a3adf4129cd6c62edfdea12a2658</string>
+			</dict>
+			<key>com.github.rtrouton.pkg.Firefox</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b195cea242886d8350fcd06df3a0368e8a8dcd19</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.rtrouton-recipes/Firefox/Firefox.pkg.recipe</string>
+				<key>sha256_hash</key>
+				<string>b0e97095f63138bbf4bcb53565280f956957b8871efd23c3f207588369fa5bc6</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
